@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+body{
+    background-color: aliceblue;
+    position: relative;
+}
+
+.container{
+    background-color: white;
+    border-radius:10px;
+    box-shadow: 2px 2px 2px 1px rgb(224, 224, 224);
+    width: 50%;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,5%);   
+    border: 5px solid rgb(0, 0, 0);
+    overflow: scroll;
+
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 5px solid rgb(0, 0, 0);
+}
+.header h1 , .icon{
+    font-size: 3rem;
+}
+
+/*-------------------------*/
+.form{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.addInput{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.addInput input{
+    width: 80%;
+}
+.addInput button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    min-width: 20%;
+    color: white;
+    background: #16a34a; 
+    cursor: pointer;
+    transition: .3s all;
+    padding: 12px;
+}
+.addInput button b{
+    font-size: 2rem;
+}
+.addInput button:hover{
+    background: #166534;
+}
+
+.addInput input , .search{
+    background-color: #e4e4e4;
+}
+
+.addInput input,button ,.search{
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;   
+}
+.checkCompleted{
+    display: flex;
+    gap:5px;
+}
+.checkCompleted label{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.checkCompleted input,label{
+    cursor: pointer;
+}
+.form .buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.buttons button{
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    transition: .3s all;
+}
+.buttons button:hover{
+    background: #1e40af;
+}
+
+.form hr{
+    border-bottom: 3px solid black;
+}
+
+.Tasks{
+    width: 100%;
+    padding: 10px;
+    list-style: none;
+    padding: 0;
+}
+.Tasks li{
+    margin-top: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e4e4e4;
+}
+
+li .actions{
+    display: flex;
+    gap: 5px;
+}
+
+li .actions button{
+    padding: 10px;
+    font-size: .8rem;
+    font-weight: 500;
+    color: white;
+}
+li .actions .completed{
+  background: #16a34a; 
+}
+li .actions .completed:hover{
+    background: #166534;
+}
+li .actions .edit{
+    background-color: #2563eb;
+}
+li .actions .edit:hover{
+  background: #1e40af;
+}
+.actions .delete {
+  background: #dc2626; 
+}
+.actions .delete:hover {
+  background: #991b1b;
+}
+
+@media (max-width:1000px){
+    .container{
+        width: 60%;
+    }
+}
+@media (max-width:800px){
+    .container{
+        width: 70%;
+    }
+}
+
+@media (max-width:500px){
+    .container{
+        width: 100%;
+        height:100vh;
+        transform: translate(-50%,0%);   
+    }
+}
+
+
+.modal {
+    position: fixed;
+    top: 0; left: 0; right:0; bottom:0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
+}
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 1s all;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 300px;
+}
+
+.modal-content h3{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-content input{
+    width:100%;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.modal-buttons button {
+  margin-left: 5px;
+  padding: 15px;
+  color: white;
+}
+
+.modal-buttons button:first-child{
+    background-color: #16a34a;
+    transition: .3s all;
+}
+
+.modal-buttons button:first-child:hover{
+    background-color: #166534;
+}
+
+.modal-buttons button:last-child{
+    background-color: #dc2626;
+    transition: .3s all;
+}
+
+.modal-buttons button:last-child:hover{
+    background-color: #991b1b;
+}
