@@ -3,15 +3,13 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://jihadalibrahimm.github.io/To-Do-App",
+  "homepage": "https://jihadalibrahimm.github.io/to-do-app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "vite build",
     "deploy": "gh-pages -d dist"
-
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
